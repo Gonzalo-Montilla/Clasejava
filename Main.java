@@ -1,38 +1,16 @@
-
-package ClaseFinal;
-
-import java.util.Scanner;
-import java.util.logging.Logger;
+import java.lang.reflect.Array;
 
 public class Main {
-
-    private static final Logger log = Logger.getLogger(Main.class.getName());
-
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        try{
 
-            System.out.println("Ingrese primer numero");
-            int num = sc.nextInt();
-            System.out.println("Ingrese segundo numero");
-            int num2 = sc.nextInt();
+        list<String>estudiantes= new ArrayList<String>();
 
-            var resultado = num / num2;
+        estudiantes.add("mauricio");
+        estudiantes.add("Gonzo");
+        estudiantes.add("Chalo");
 
-            log.info("El resultado de la divicion es: " +resultado );
-
-        }catch (ArithmeticException e){
-            log.warning("el arreglo esta sobredimencionado");
-            System.out.println("El arreglo esta sobredimencionado");
-        }
-        catch (RuntimeException e){
-            log.warning(e.getMessage());
-        }finally {
-            sc.close();
-        }
-
-
-
+        System.out.println(estudiantes.getFirst);
 
     }
 }
+
